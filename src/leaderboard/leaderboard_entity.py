@@ -1,7 +1,7 @@
 from config import config
 from sqlalchemy import Integer, String, TEXT, NUMERIC, VARCHAR
 from sqlalchemy.orm import Mapped, mapped_column
-
+import os
 
 class Leaderboard(config.Base):
     __tablename__ = "RewardsDeposit_versioned"
@@ -86,4 +86,4 @@ class Leaderboard(config.Base):
         name="effectiveToCheckpoint",
         use_existing_column=True,
     )
-    __table_args__ = {"schema": "ponder_1707091779542"}
+    __table_args__ = {"schema": os.getenv("SCHEMA")}
