@@ -9,7 +9,6 @@ class Leaderboard(config.Base):
     id: Mapped[str] = mapped_column(
         TEXT,
         primary_key=True,
-        autoincrement=True,
         use_existing_column=True,
     )
     timestamp: Mapped[int] = mapped_column(
