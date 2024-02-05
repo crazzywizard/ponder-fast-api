@@ -2,7 +2,9 @@ from config import config
 from sqlalchemy import Integer, String, TEXT, NUMERIC, VARCHAR
 from sqlalchemy.orm import Mapped, mapped_column
 import os
+from dotenv import load_dotenv
 
+load_dotenv()
 class Leaderboard(config.Base):
     __tablename__ = "RewardsDeposit_versioned"
 
